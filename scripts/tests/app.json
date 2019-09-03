@@ -1,0 +1,10 @@
+{
+  "target": ["web"],
+  "pwa": false,
+  "ui": "bootstrap",
+  "auth": false,
+  "lazy": false,
+  "angulartics": false,
+  "utility": [],
+  "firebaseDeploy": true
+}

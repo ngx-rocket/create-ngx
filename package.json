@@ -1,0 +1,73 @@
+{
+  "name": "create-ngx",
+  "version": "1.0.0",
+  "preferGlobal": true,
+  "description": "The fastest way to rocket start your Angular projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngx-rocket/create-ngx.git"
+  },
+  "homepage": "https://github.com/ngx-rocket/create-ngx",
+  "bugs": {
+    "url": "https://github.com/ngx-rocket/create-ngx/issues"
+  },
+  "keywords": [
+    "ngx",
+    "rocket",
+    "app",
+    "addon",
+    "generator",
+    "angular",
+    "angular-cli",
+    "bootstrap",
+    "ionic",
+    "material",
+    "scalable",
+    "enterprise",
+    "scaffold",
+    "boilerplate",
+    "seed",
+    "typescript",
+    "sass",
+    "cordova",
+    "mobile",
+    "web",
+    "pwa",
+    "electron",
+    "tool",
+    "cli",
+    "create"
+  ],
+  "main": "index.js",
+  "bin": {
+    "create-ngx": "./bin/create-ngx"
+  },
+  "scripts": {
+    "lint": "xo \"*.js\" \"bin/*.js\"",
+    "lint:fix": "npm run lint -s -- --fix",
+    "test": "npm run lint -s && ./scripts/test.sh"
+  },
+  "author": {
+    "name": "Yohan Lasorsa",
+    "url": "https://twitter.com/sinedied"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cross-spawn": "^6.0.5",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "xo": "^0.24.0"
+  },
+  "engines": {
+    "node": ">=10.9.0"
+  },
+  "xo": {
+    "space": true,
+    "prettier": true
+  },
+  "files": [
+    "index.js",
+    "cli"
+  ]
+}
