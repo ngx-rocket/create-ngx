@@ -3,7 +3,6 @@
 set -e
 
 CWD=$(pwd)
-SCRIPT_FOLDER=$(dirname "${BASH_SOURCE[0]}")
 TEST_FOLDER=$CWD/sample-app
 TEST_APP_NAME="Sample App"
 
@@ -24,29 +23,29 @@ trap cleanup ERR
 
 echo
 echo -------------------------------------------------------------------------------
-echo Testing generator without addon
+echo Testing generator without add-on
 echo -------------------------------------------------------------------------------
 echo
 
-prepare()
-npx create-ngx --no-analytics --automate "$CWD/tests/app.json" "$TEST_APP_NAME" --no-insights
+prepare
+npx create-ngx --no-analytics --no-insights --automate "$CWD/scripts/tests/app.json" "$TEST_APP_NAME" --skip-install
 
 echo
 echo -------------------------------------------------------------------------------
-echo Testing generator with addon
+echo Testing generator with add-on
 echo -------------------------------------------------------------------------------
 echo
 
-prepare()
-npx create-ngx --no-analytics --automate "$CWD/tests/app.json" "$TEST_APP_NAME" --no-insights --addons addon-firebase
+prepare
+npx create-ngx --no-analytics --no-insights --automate "$CWD/scripts/tests/app.json" "$TEST_APP_NAME" --addons addon-firebase --skip-install
 
 echo
 echo -------------------------------------------------------------------------------
-echo Testing generator with addon from url/git
+echo Testing generator with add-on from url/git
 echo -------------------------------------------------------------------------------
 echo
 
-prepare()
-npx create-ngx --no-analytics --automate "$CWD/tests/app.json" "$TEST_APP_NAME" --no-insights --addons https://github.com/ngx-rocket/addon-firebase.git
+prepare
+npx create-ngx --no-analytics --no-insights --automate "$CWD/scripts/tests/app.json" "$TEST_APP_NAME" --addons https://github.com/ngx-rocket/addon-firebase.git --skip-install
 
-cleanup()
+cleanup
