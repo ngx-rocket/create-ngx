@@ -43,7 +43,7 @@
     "create-ngx": "./bin/create-ngx"
   },
   "scripts": {
-    "commit": "npx git-cz",
+    "commit": "git-cz",
     "lint": "xo \"*.js\" \"bin/*.js\"",
     "lint:fix": "npm run lint -s -- --fix",
     "test": "npm run lint -s && ./scripts/test.sh",
@@ -56,15 +56,16 @@
   },
   "license": "MIT",
   "dependencies": {
-    "cross-spawn": "^6.0.5",
+    "cross-spawn": "^7.0.0",
     "minimist": "^1.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
-    "@commitlint/prompt": "^8.1.0",
     "@semantic-release/changelog": "^3.0.4",
     "@semantic-release/git": "^7.0.16",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2",
     "husky": "^3.0.5",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
@@ -89,7 +90,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "@commitlint/prompt"
+      "path": "cz-conventional-changelog"
     }
   },
   "lint-staged": {
