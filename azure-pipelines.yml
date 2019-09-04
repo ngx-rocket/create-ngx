@@ -50,8 +50,13 @@ steps:
     versionSpec: $(nodeVersion)
   displayName: Install Node.js
 
-- script: npm install
+- script: |
+    npm install
+    npm link
   displayName: Install dependencies
 
-- script: npm test
+- bash: |
+    chmod +x scripts/test.sh
+    npm run lint
+    bash -c "scripts/test.sh"
   displayName: Run unit tests
