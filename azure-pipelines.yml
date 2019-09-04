@@ -51,8 +51,6 @@ steps:
   displayName: Install Node.js
 
 - bash: |
-    chmod +x scripts/test.sh
-    chmod +x bin/create-ngx
     npm install
     npm link
   displayName: Install dependencies
