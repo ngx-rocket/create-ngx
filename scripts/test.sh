@@ -28,7 +28,7 @@ echo ---------------------------------------------------------------------------
 echo
 
 prepare
-npx create-ngx --no-analytics --no-insights --automate "$CWD/scripts/tests/app.json" "$TEST_APP_NAME" --skip-install
+create-ngx --no-analytics --no-insights --automate "$CWD/scripts/tests/app.json" "$TEST_APP_NAME" --skip-install
 
 echo
 echo -------------------------------------------------------------------------------
@@ -37,7 +37,7 @@ echo ---------------------------------------------------------------------------
 echo
 
 prepare
-npx create-ngx --no-analytics --no-insights --automate "$CWD/scripts/tests/app.json" "$TEST_APP_NAME" --addons addon-firebase --skip-install
+create-ngx --no-analytics --no-insights --automate "$CWD/scripts/tests/app.json" "$TEST_APP_NAME" --addons addon-firebase --skip-install
 
 echo
 echo -------------------------------------------------------------------------------
@@ -46,6 +46,6 @@ echo ---------------------------------------------------------------------------
 echo
 
 prepare
-npx create-ngx --no-analytics --no-insights --automate "$CWD/scripts/tests/app.json" "$TEST_APP_NAME" --addons https://github.com/ngx-rocket/addon-firebase.git --skip-install
+create-ngx --no-analytics --no-insights --automate "$CWD/scripts/tests/app.json" "$TEST_APP_NAME" --addons https://github.com/ngx-rocket/addon-firebase.git --skip-install
 
 cleanup

@@ -17,7 +17,7 @@ strategy:
     mac-node-latest:
       imageName: 'macos-latest'
       nodeVersion: '>=12.x'
-    windows-node8:
+    windows-node10:
       imageName: 'windows-latest'
       nodeVersion: '10.x'
     windows-node-latest:
@@ -40,7 +40,7 @@ schedules:
 
 steps:
   # Needed to avoid issues with Prettier
-- script: git config --global core.autocrlf false
+- bash: git config --global core.autocrlf false
   displayName: Disable git automatic line ending conversion
 
 - checkout: self
@@ -50,13 +50,14 @@ steps:
     versionSpec: $(nodeVersion)
   displayName: Install Node.js
 
-- script: |
+- bash: |
+    chmod +x scripts/test.sh
+    chmod +x bin/create-ngx
     npm install
     npm link
   displayName: Install dependencies
 
 - bash: |
-    chmod +x scripts/test.sh
     npm run lint
     bash -c "scripts/test.sh"
   displayName: Run unit tests
