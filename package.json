@@ -40,7 +40,7 @@
   ],
   "main": "index.js",
   "bin": {
-    "create-ngx": "./bin/create-ngx"
+    "create-ngx": "./bin/create-ngx.js"
   },
   "scripts": {
     "commit": "git-cz",
@@ -132,6 +132,6 @@
   },
   "files": [
     "index.js",
-    "cli"
+    "bin"
   ]
 }
