@@ -17,6 +17,8 @@ See [ngX-Rocket documentation](https://github.com/ngx-rocket/generator-ngx-rocke
 *Note: This package does not replace the original `ngx` CLI, it is aimed to compliment it by providing an always-fresh, no-install alternative.
 If you plan to frequently generate new projects, it is better to install the `generator-ngx-rocket` globally to use the local `ngx` CLI instead of `create-ngx` that will always fetch the latest version from the network.*
 
+![create-ngx demo animation](https://user-images.githubusercontent.com/593151/64329581-cc0b8e00-cfcf-11e9-91cf-1bcb50f3f30a.gif)
+
 ## Usage
 
 To create a new project, just run:
