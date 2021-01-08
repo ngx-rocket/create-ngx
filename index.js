@@ -15,7 +15,7 @@ function createNgxCli(args) {
 
   const packages = ['-p', 'generator-ngx-rocket'];
   const addons = options.addons ? options.addons.split(' ') : [];
-  addons.forEach(addon => {
+  addons.forEach((addon) => {
     if (addon) {
       packages.push('-p');
       packages.push(
