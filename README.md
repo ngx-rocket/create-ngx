@@ -2,7 +2,6 @@
 
 [![NPM version](https://img.shields.io/npm/v/create-ngx.svg)](https://www.npmjs.com/package/create-ngx)
 [![Build Status](https://github.com/ngx-rocket/create-ngx/workflows/build/badge.svg)](https://github.com/ngx-rocket/create-ngx/actions)
-[![Build Status](https://sinedied.visualstudio.com/oss-pipelines/_apis/build/status/ngx-rocket.create-ngx?branchName=master)](https://sinedied.visualstudio.com/oss-pipelines/_build/latest?definitionId=3&branchName=master&WT.mc_id=createngx-github-yolasors)
 ![Node version](https://img.shields.io/node/v/create-ngx.svg)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
