@@ -9,25 +9,23 @@ jobs:
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest, windows-latest]
-        node-version: [10.x, 12.x]
+        node-version: ['10', '>=14']
 
+    name: ${{ matrix.platform }} / Node.js v${{ matrix.node-version }}
     runs-on: ${{ matrix.platform }}
-
     steps:
-    - uses: actions/checkout@v1
-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      # Needed to avoid issues with Prettier
+    - run: git config --global core.autocrlf false
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-
     - name: Install dependencies
       run: |
         npm install
         npm link
       env:
         CI: true
-
     - name: Run unit tests
       run: |
         npm run lint
