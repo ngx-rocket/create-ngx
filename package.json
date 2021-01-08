@@ -47,7 +47,7 @@
     "lint": "xo \"*.js\" \"bin/*.js\"",
     "lint:fix": "npm run lint -s -- --fix",
     "test": "npm run lint -s && ./scripts/test.sh",
-    "release:check": "npm run release -s -- --dry-run"
+    "release:check": "semantic-release --dry-run"
   },
   "author": {
     "name": "Yohan Lasorsa",
