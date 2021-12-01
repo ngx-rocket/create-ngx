@@ -1,3 +1,4 @@
+const process = require('process');
 const spawn = require('cross-spawn');
 const minimist = require('minimist');
 const pkg = require('./package.json');
@@ -25,6 +26,9 @@ function createNgxCli(args) {
       );
     }
   });
+
+  // Skip confirmation prompt
+  process.env.npm_config_yes = true;
 
   return spawn.sync('npx', [...packages, 'ngx', 'new'].concat(args || []), {
     stdio: 'inherit'
