@@ -26,7 +26,7 @@ function createNgxCli(args) {
     }
   });
 
-  return spawn.sync('npx', packages.concat(['ngx', 'new']).concat(args || []), {
+  return spawn.sync('npx', [...packages, 'ngx', 'new'].concat(args || []), {
     stdio: 'inherit'
   });
 }
