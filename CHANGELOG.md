@@ -1,3 +1,25 @@
+# [1.1.0](https://github.com/ngx-rocket/create-ngx/compare/1.0.3...1.1.0) (2021-12-01)
+
+
+### Bug Fixes
+
+*  dependency should have been a dev dependency ([e962e73](https://github.com/ngx-rocket/create-ngx/commit/e962e73ec39b26394096428003c51abd8117f35c))
+
+
+### chore
+
+* update deps ([3fe6a17](https://github.com/ngx-rocket/create-ngx/commit/3fe6a17adfb4959ff4f1eb441197236af4daa5fb))
+
+
+### Features
+
+* remove extra confirmation prompt ([791b130](https://github.com/ngx-rocket/create-ngx/commit/791b1304147498ddfcaaa56a970dcd3198a21c4a))
+
+
+### BREAKING CHANGES
+
+* requires Node >= 12.20
+
 ## [1.0.3](https://github.com/ngx-rocket/create-ngx/compare/v1.0.2...1.0.3) (2021-01-08)
 
 
